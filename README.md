@@ -1,6 +1,6 @@
 # Project Description
 
-# Decription of the Command Interpreter
+# Description of the Command Interpreter
 
 # How to start the project
 
