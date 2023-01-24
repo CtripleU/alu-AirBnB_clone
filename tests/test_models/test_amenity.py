@@ -26,7 +26,7 @@ class TestAmenity(unittest.TestCase):
         """
         self.assertIsInstance(self.amenity, Amenity)
         self.assertIsInstance(self.amenity.name, str)
-        self.asserEqual(self.amenity.name, "")
+        self.assertEqual(self.amenity.name, "")
 
     def test_name_setter(self):
         """
