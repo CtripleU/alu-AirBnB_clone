@@ -4,8 +4,10 @@ from models.base_model import BaseModel
 
 """
 Module Place
-defines the Place class with a public attribute 'city_id', 'user_id', 'name', 'description', 'number_rooms', 
-'number_bathrooms', 'max_guest', 'price_by_night', 'latitude', 'longitude', and 'amenity_ids'
+defines the Place class with a public attribute
+'city_id', 'user_id', 'name', 'description', 'number_rooms',
+'number_bathrooms', 'max_guest', 'price_by_night',
+'latitude', 'longitude', and 'amenity_ids'
 """
 
 
@@ -23,4 +25,4 @@ class Place(BaseModel):
     price_by_night = 0
     latitude = 0.0
     longitude = 0.0
-    amenity_ids= []
+    amenity_ids = []

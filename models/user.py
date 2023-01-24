@@ -7,7 +7,8 @@ from models.base_model import BaseModel
 
 """
 Module User
-defines a user class with attributes including email, password, first_name, and last_name
+defines a user class with attributes including email,
+password, first_name, and last_name
 """
 
 
