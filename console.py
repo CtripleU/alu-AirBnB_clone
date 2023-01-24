@@ -5,13 +5,14 @@ Console Module
 
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
     """Command"""
     prompt = "(hbnb)"
-    class_list = ["BaseModel"]
+    class_list = ["BaseModel", "User"]
 
     def do_quit(self, line):
         """Exit if quit command is used"""
