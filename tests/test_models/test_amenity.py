@@ -14,7 +14,7 @@ from models.amenity import Amenity
 
 class TestAmenity(unittest.TestCase):
     """Tests"""
-     
+
     def setUp(self):
         self.amenity = Amenity()
 
@@ -56,4 +56,3 @@ class TestAmenity(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
