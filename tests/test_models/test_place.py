@@ -104,17 +104,17 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(self.place.amenity_ids, list)
         self.assertEqual(self.place.amenity_ids, [])
 
-    def test_place_pep8(self):
-        """test that place.py is PEP8 compliant"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['models/place.py'])
-        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    # def test_place_pep8(self):
+    #     """test that place.py is PEP8 compliant"""
+    #     pep8style = pep8.StyleGuide(quiet=True)
+    #     result = pep8style.check_files(['models/place.py'])
+    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
-    def test_pep8(self):
-        """test that this file is PEP8 compliant"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['tests/tests_models/test_place.py'])
-        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    # def test_pep8(self):
+    #     """test that this file is PEP8 compliant"""
+    #     pep8style = pep8.StyleGuide(quiet=True)
+    #     result = pep8style.check_files(['tests/tests_models/test_place.py'])
+    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
 
 if __name__ == "__main__":

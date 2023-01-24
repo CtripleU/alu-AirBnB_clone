@@ -17,7 +17,8 @@ from models.engine.file_storage import FileStorage
 class HBNBCommand(cmd.Cmd):
     """Command"""
     prompt = "(hbnb)"
-    class_list = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+    class_list = ["BaseModel", "User", "State",
+                  "City", "Amenity", "Place", "Review"]
 
     def do_quit(self, line):
         """Exit if quit command is used"""
@@ -100,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
             for obj in tmp_dict.values():
                 obj_list.append(str(obj))
             print(obj_list)
-        elif line_list[0]  in self.class_list:
+        elif line_list[0] in self.class_list:
             for key, val in tmp_dict.items():
                 if line_list[0] in key:
                     obj_list.append(str(val))
