@@ -26,7 +26,7 @@ class TestState(unittest.TestCase):
         """
         self.assertIsInstance(self.state, State)
         self.assertIsInstance(self.state.name, str)
-        self.asserEqual(self.state.name, "")
+        self.assertEqual(self.state.name, "")
 
     def test_name_setter(self):
         """
