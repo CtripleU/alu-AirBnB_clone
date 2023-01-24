@@ -9,9 +9,10 @@ from datetime import datetime
 import models
 from models.place import Place
 
+
 class TestPlace(unittest.TestCase):
     """Tests"""
-     
+
     def setUp(self):
         self.place = Place()
 
@@ -37,7 +38,7 @@ class TestPlace(unittest.TestCase):
         2. test that the name atttribute has the value of an empty string
         """
         self.assertIsInstance(self.place.name, str)
-        self.assertEqual(self.place.name, "")     
+        self.assertEqual(self.place.name, "")
 
     def test_description(self):
         """
@@ -46,7 +47,7 @@ class TestPlace(unittest.TestCase):
         """
         self.assertIsInstance(self.place.description, str)
         self.assertEqual(self.place.description, "")
-    
+
     def test_number_rooms(self):
         """
         1. test that the number_rooms attribute of the Place object is an instance of the int class
@@ -101,7 +102,7 @@ class TestPlace(unittest.TestCase):
         2. test that the amenity_ids atttribute has the value of an empty list
         """
         self.assertIsInstance(self.place.amenity_ids, list)
-        self.assertEqual(self.place.amenity_ids, [])   
+        self.assertEqual(self.place.amenity_ids, [])
 
     def test_place_pep8(self):
         """test that place.py is PEP8 compliant"""
@@ -114,6 +115,7 @@ class TestPlace(unittest.TestCase):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/tests_models/test_place.py'])
         self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+
 
 if __name__ == "__main__":
     unittest.main()

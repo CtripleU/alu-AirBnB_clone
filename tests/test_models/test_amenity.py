@@ -14,7 +14,7 @@ from models.amenity import Amenity
 
 class TestAmenity(unittest.TestCase):
     """Tests"""
-     
+
     def setUp(self):
         self.amenity = Amenity()
 
@@ -54,6 +54,6 @@ class TestAmenity(unittest.TestCase):
         result = pep8style.check_files(['tests/tests_models/test_amenity.py'])
         self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
+
 if __name__ == "__main__":
     unittest.main()
-
