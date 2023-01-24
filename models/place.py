@@ -11,7 +11,7 @@ defines the Place class with a public attribute 'city_id', 'user_id', 'name', 'd
 
 class Place(BaseModel):
     """
-    Amenity class
+    Place class
     """
     city_id = ""
     user_id = ""
