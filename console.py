@@ -17,7 +17,7 @@ from models.engine.file_storage import FileStorage
 class HBNBCommand(cmd.Cmd):
     """Command"""
     prompt = "(hbnb)"
-    class_list = ["BaseModel", "User", "State", 
+    class_list = ["BaseModel", "User", "State",
     "City", "Amenity", "Place", "Review"]
 
     def do_quit(self, line):
