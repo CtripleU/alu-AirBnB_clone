@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Tests for User
+Tests for State
 """
 
 import unittest
@@ -21,7 +21,7 @@ class TestState(unittest.TestCase):
     def test_state_init(self):
         """
         1. test that a new instance of the class 'State' is created correctly
-        2. sest that the 'name' attribute of the User object is an instance of the str class
+        2. test that the 'name' attribute of the State object is an instance of the str class
         3. test that the initial value of 'name' attribute is an empty string
         """
         self.assertIsInstance(self.state, State)
@@ -39,8 +39,8 @@ class TestState(unittest.TestCase):
         """
         1. test that the 'name' attribute gets the correct value
         """
-        self.state.name = "Abuja"
-        self.assertEqual(self.state.name, "Abuja")
+        self.state.name = "Enugu"
+        self.assertEqual(self.state.name, "Enugu")
 
     def test_user_pep8(self):
         """test that state.py is PEP8 compliant"""
