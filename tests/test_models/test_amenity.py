@@ -25,7 +25,7 @@ class TestAmenity(unittest.TestCase):
         3. test that the initial value of 'name' attribute is an empty string
         """
         self.assertIsInstance(self.amenity, Amenity)
-        self.assertIsInstance(self.user.name, str)
+        self.assertIsInstance(self.amenity.name, str)
         self.asserEqual(self.amenity.name, "")
 
     def test_name_setter(self):
