@@ -26,8 +26,8 @@ class TestCity(unittest.TestCase):
         self.assertIsInstance(self.city, City)
         self.assertIsInstance(self.city.name, str)
         self.assertIsInstance(self.city.state_id, str)
-        self.asserEqual(self.city.state_id, "")
-        self.asserEqual(self.city.name, "")
+        self.assertEqual(self.city.state_id, "")
+        self.assertEqual(self.city.name, "")
 
     def test_name_setter(self):
         """

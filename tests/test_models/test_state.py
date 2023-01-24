@@ -25,8 +25,8 @@ class TestState(unittest.TestCase):
         3. test that the initial value of 'name' attribute is an empty string
         """
         self.assertIsInstance(self.state, State)
-        self.assertIsInstance(self.user.name, str)
-        self.asserEqual(self.state.name, "")
+        self.assertIsInstance(self.state.name, str)
+        self.assertEqual(self.state.name, "")
 
     def test_name_setter(self):
         """
