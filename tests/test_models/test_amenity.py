@@ -16,6 +16,7 @@ class TestAmenity(unittest.TestCase):
     """Tests"""
 
     def setUp(self):
+        """setup"""
         self.amenity = Amenity()
 
     def test_amenity_init(self):
