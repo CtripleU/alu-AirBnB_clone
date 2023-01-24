@@ -44,17 +44,17 @@ class TestCity(unittest.TestCase):
         self.city.name = "Port Harcourt"
         self.assertEqual(self.city.name, "Port Harcourt")
 
-    # def test_city_pep8(self):
-    #     """test that city.py is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['models/city.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_city_pep8(self):
+        """test that city.py is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/city.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
-    # def test_pep8(self):
-    #     """test that this file is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['tests/tests_models/test_city.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_pep8(self):
+        """test that this file is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/tests_models/test_city.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
 
 if __name__ == "__main__":
