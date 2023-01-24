@@ -21,9 +21,12 @@ class TestAmenity(unittest.TestCase):
 
     def test_amenity_init(self):
         """
-        1. test that a new instance of the class 'Amenity' is created correctly
-        2. test that the 'name' attribute of the Amenity object is an instance of the str class
-        3. test that the initial value of 'name' attribute is an empty string
+        1. test that a new instance of the class 'Amenity'
+        is created correctly
+        2. test that the 'name' attribute of the Amenity
+        object is an instance of the str class
+        3. test that the initial value of 'name'
+        attribute is an empty string
         """
         self.assertIsInstance(self.amenity, Amenity)
         self.assertIsInstance(self.amenity.name, str)
@@ -31,14 +34,16 @@ class TestAmenity(unittest.TestCase):
 
     def test_name_setter(self):
         """
-        1. test that the 'name' attribute can be set to a new value correctly
+        1. test that the 'name' attribute can 
+        be set to a new value correctly
         """
         self.amenity.name = "Internet"
         self.assertEqual(self.amenity.name, "Internet")
 
     def test_name_getter(self):
         """
-        1. test that the 'name' attribute gets the correct value
+        1. test that the 'name' attribute gets the 
+        correct value
         """
         self.amenity.name = "Electricity"
         self.assertEqual(self.amenity.name, "Electricity")
