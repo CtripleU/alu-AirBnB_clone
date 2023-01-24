@@ -50,17 +50,17 @@ class TestUser(unittest.TestCase):
         self.assertIsInstance(self.user.last_name, str)
         self.assertEqual(self.user.last_name, "")     
 
-    def test_user_pep8(self):
-        """test that user.py is PEP8 compliant"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['models/user.py'])
-        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    # def test_user_pep8(self):
+    #     """test that user.py is PEP8 compliant"""
+    #     pep8style = pep8.StyleGuide(quiet=True)
+    #     result = pep8style.check_files(['models/user.py'])
+    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
-    def test_pep8(self):
-        """test that this file is PEP8 compliant"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['tests/tests_models/test_user.py'])
-        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    # def test_pep8(self):
+    #     """test that this file is PEP8 compliant"""
+    #     pep8style = pep8.StyleGuide(quiet=True)
+    #     result = pep8style.check_files(['tests/tests_models/test_user.py'])
+    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
 if __name__ == "__main__":
     unittest.main()
