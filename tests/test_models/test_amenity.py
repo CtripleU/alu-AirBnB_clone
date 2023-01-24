@@ -42,7 +42,7 @@ class TestAmenity(unittest.TestCase):
         self.amenity.name = "Electricity"
         self.assertEqual(self.amenity.name, "Electricity")
 
-    def test_user_pep8(self):
+    def test_amenity_pep8(self):
         """test that amenity.py is PEP8 compliant"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/amenity.py'])

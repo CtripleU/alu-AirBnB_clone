@@ -103,7 +103,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(self.place.amenity_ids, list)
         self.assertEqual(self.place.amenity_ids, [])   
 
-    def test_user_pep8(self):
+    def test_place_pep8(self):
         """test that place.py is PEP8 compliant"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/place.py'])

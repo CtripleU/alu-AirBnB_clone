@@ -43,7 +43,7 @@ class TestCity(unittest.TestCase):
         self.city.name = "Port Harcourt"
         self.assertEqual(self.city.name, "Port Harcourt")
 
-    def test_user_pep8(self):
+    def test_city_pep8(self):
         """test that city.py is PEP8 compliant"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/city.py'])

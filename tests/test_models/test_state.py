@@ -42,7 +42,7 @@ class TestState(unittest.TestCase):
         self.state.name = "Enugu"
         self.assertEqual(self.state.name, "Enugu")
 
-    def test_user_pep8(self):
+    def test_state_pep8(self):
         """test that state.py is PEP8 compliant"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/state.py'])
