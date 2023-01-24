@@ -39,8 +39,8 @@ class TestState(unittest.TestCase):
         """
         1. test that the 'name' attribute gets the correct value
         """
-        self.state.name = "Abuja"
-        self.assertEqual(self.state.name, "Abuja")
+        self.state.name = "Enugu"
+        self.assertEqual(self.state.name, "Enugu")
 
     def test_user_pep8(self):
         """test that state.py is PEP8 compliant"""
