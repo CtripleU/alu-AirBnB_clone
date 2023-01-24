@@ -9,9 +9,10 @@ from datetime import datetime
 import models
 from models.city import City
 
+
 class TestCity(unittest.TestCase):
     """Tests"""
-     
+
     def setUp(self):
         self.city = City()
 
@@ -54,6 +55,7 @@ class TestCity(unittest.TestCase):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/tests_models/test_city.py'])
         self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+
 
 if __name__ == "__main__":
     unittest.main()
