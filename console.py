@@ -101,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
             for obj in tmp_dict.values():
                 obj_list.append(str(obj))
             print(obj_list)
-        elif line_list[0]  in self.class_list:
+        elif line_list[0] in self.class_list:
             for key, val in tmp_dict.items():
                 if line_list[0] in key:
                     obj_list.append(str(val))
