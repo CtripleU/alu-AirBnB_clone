@@ -20,48 +20,32 @@ class TestFileStorage(unittest.TestCase):
         """teardown"""
         try:
             os.remove("file.json")
-        except:
+        except Exception:
             pass
-        del self.base
-        del self.store
 
-    def test_all(self):
-        """test"""
-        store_dict = self.store.all()
-        self.assertIsInstance(store_dict, dict)
-
-    def test_news(self):
-        """test"""
-        for item in self.store.all().values():
-            same = item
-        self.assertTrue(same is item)
-
-    def test_saver(self):
-        """saver"""
+    def test_save_reload(self):
+        """ test save and reload from json """
+        self.base.name = "Bond"
+        self.base.my_number = 7
+        name = str(self.my_model.__class__.__name__)
+        key = name + "." + str(self.base.id)
         self.base.save()
-        self.assertTrue(self.store._FileStorage__objects
-                            .get(f"BaseModel.{self.base.id}"))
-
-    # def test_reload(self):
-    #     """reload"""
-    #     self.store.save()
-    #     self.store.reload()
-    #     for obj in self.store.all().values():
-    #         load = obj
-    #     self.assertEqual(self.base.to_dict()['id'], load.to_dict()['id'])
-
-    def test_model(self):
-        """model"""
-        # with open('file.json', 'w') as f:
-        #     pass
-        # with self.assertRaises(ValueError):
-        #     self.store.reload()
-        # with open("file.json", "w") as f:
-        #     f.write("{}")
-        # with open("file.json", "r") as r:
-        #     for line in r:
-        #         self.assertEqual(line, "{}")
-        # self.assertIs(self.store.reload(), None)
-        self.store.save()
+        self.assertTrue(os.path.exists('file.json'))
         self.store.reload()
-        self.assertTrue(len(self.store.all()) > 0)
+        objs = self.store.all()
+        self.assertIsNotNone(objs[key])
+        self.obj_reload = objs[key]
+        self.assertTrue(self.base.__dict__ == self.obj_reload.__dict__)
+        self.assertTrue(self.base is not self.obj_reload)
+        self.assertIsInstance(self.obj_reload, BaseModel)
+        self.assertEqual(self.base.my_number, 7)
+        self.assertTrue(self.base.created_at != self.base.updated_at)
+
+
+class TestSave(unittest.TestCase):
+    """doc"""
+    def test_base_model_save(self):
+        """ BaseModel save method calls storage save """
+        new = BaseModel()
+        new.save()
+        self.assertTrue(os.path.exists('file.json'))
