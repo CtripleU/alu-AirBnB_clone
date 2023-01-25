@@ -1,10 +1,10 @@
 # alu-AirBnB Starter Kit
-This project is a clone of AirBnB that integrates the Serverside or back-end (containing a console, storage engoines, and a RESTful API) and the Clientside (or front-end.
+This project is a clone of AirBnB that integrates the Serverside or back-end (containing a console, storage engoines, and a RESTful API) and the Clientside or front-end.
 
 The project currently implements only the console or Command Interpreter.
 
 ## Description of the Command Interpreter
-The Command Interpreter or command shell is provides an interface for executing specific commands to manage the objects of this project. Such as:
+The Command Interpreter or command shell provides an interface for executing specific commands to manage the objects of this project. Such as:
 - Create a new object (ex: a new User or a new Place)
 - Retrieve an object from a file, a database etc…
 - Do operations on objects (count, compute stats, etc…)
