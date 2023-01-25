@@ -15,7 +15,7 @@ class TestFileStorage(unittest.TestCase):
         """setup"""
         self.base = BaseModel()
         self.store = FileStorage()
-    
+
     def teardown(self):
         """teardown"""
         try:
@@ -24,22 +24,23 @@ class TestFileStorage(unittest.TestCase):
             pass
         del self.base
         del self.store
-    
+
     def test_all(self):
         """test"""
         store_dict = self.store.all()
         self.assertIsInstance(store_dict, dict)
-    
+
     def test_news(self):
         """test"""
         for item in self.store.all().values():
             same = item
         self.assertTrue(same is item)
-    
+
     def test_saver(self):
         """saver"""
         self.base.save()
-        self.assertTrue(self.store._FileStorage__objects.get(f"BaseModel.{self.base.id}"))
+        self.assertTrue(self.store._FileStorage__objects
+                            .get(f"BaseModel.{self.base.id}"))
 
     # def test_reload(self):
     #     """reload"""

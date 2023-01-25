@@ -34,7 +34,7 @@ class TestAmenity(unittest.TestCase):
 
     def test_name_setter(self):
         """
-        1. test that the 'name' attribute can 
+        1. test that the 'name' attribute can
         be set to a new value correctly
         """
         self.amenity.name = "Internet"
@@ -42,23 +42,24 @@ class TestAmenity(unittest.TestCase):
 
     def test_name_getter(self):
         """
-        1. test that the 'name' attribute gets the 
+        1. test that the 'name' attribute gets the
         correct value
         """
         self.amenity.name = "Electricity"
         self.assertEqual(self.amenity.name, "Electricity")
 
-    # def test_amenity_pep8(self):
-    #     """test that amenity.py is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['models/amenity.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_amenity_pep8(self):
+        """test that amenity.py is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/amenity.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
-    # def test_pep8(self):
-    #     """test that this file is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['tests/tests_models/test_amenity.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_pep8(self):
+        """test that this file is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_amenity.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+
 
 if __name__ == "__main__":
     unittest.main()

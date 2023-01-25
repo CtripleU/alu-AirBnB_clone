@@ -19,9 +19,12 @@ class TestCity(unittest.TestCase):
     def test_city_init(self):
         """
         1. test that a new instance of the class 'City' is created correctly
-        2. test that the 'name' attribute of the City object is an instance of the str class
-        3. test that the 'state_id' attribute of the City object is an instance of the str class
-        4. test that the initial value of 'state_id' attribute is an empty string
+        2. test that the 'name' attribute of the City object is an
+           instance of the str class
+        3. test that the 'state_id' attribute of the City object
+           is an instance of the str class
+        4. test that the initial value of 'state_id' attribute
+           is an empty string
         5. test that the initial value of 'name' attribute is an empty string
         """
         self.assertIsInstance(self.city, City)
@@ -44,17 +47,17 @@ class TestCity(unittest.TestCase):
         self.city.name = "Port Harcourt"
         self.assertEqual(self.city.name, "Port Harcourt")
 
-    # def test_city_pep8(self):
-    #     """test that city.py is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['models/city.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_city_pep8(self):
+        """test that city.py is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/city.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
-    # def test_pep8(self):
-    #     """test that this file is PEP8 compliant"""
-    #     pep8style = pep8.StyleGuide(quiet=True)
-    #     result = pep8style.check_files(['tests/tests_models/test_city.py'])
-    #     self.assertEqual(result.total_errors, 0, "PEP8 errors found")
+    def test_pep8(self):
+        """test that this file is PEP8 compliant"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_city.py'])
+        self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
 
 if __name__ == "__main__":
