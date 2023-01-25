@@ -57,7 +57,7 @@ class TestAmenity(unittest.TestCase):
     def test_pep8(self):
         """test that this file is PEP8 compliant"""
         pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['tests/tests_models/test_amenity.py'])
+        result = pep8style.check_files(['tests/test_models/test_amenity.py'])
         self.assertEqual(result.total_errors, 0, "PEP8 errors found")
 
 
