@@ -1,4 +1,6 @@
 # alu-AirBnB Starter Kit
+
+## Project Description
 This project is a clone of AirBnB that integrates the Serverside or back-end (containing a console, storage engoines, and a RESTful API) and the Clientside or front-end.
 
 The project currently implements only the console or Command Interpreter.
