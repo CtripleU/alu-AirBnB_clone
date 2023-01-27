@@ -44,7 +44,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self):
         """test save()"""
         copy_1 = BaseModel()
-        copy_1.name = "James"
+        # copy_1.name = "James"
         copy_1.save()
         self.assertNotEqual(copy_1.created_at, copy_1.updated_at)
 
